@@ -1,13 +1,21 @@
 package com.subrato.packages.solace_app.pojos;
 
-public class RouterConfig {
+import java.io.Serializable;
+
+public class RouterConfig implements Serializable {
 	
 	private String host;
 	private String username;
 	private String vpn_name;
 	private String password;
-	
-	
+	private String topicName;
+
+	public String getTopicName() {
+		return topicName;
+	}
+	public void setTopicName(String topicName) {
+		this.topicName = topicName;
+	}
 	public String getHost() {
 		return host;
 	}
